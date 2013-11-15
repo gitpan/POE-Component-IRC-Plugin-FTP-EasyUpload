@@ -3,7 +3,7 @@ package POE::Component::IRC::Plugin::FTP::EasyUpload;
 use warnings;
 use strict;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use Carp;
 use POE qw(Component::Net::FTP);
@@ -61,6 +61,7 @@ sub _process {
     $self->{debug}
         and carp "OUT: $$out_ref";
 
+        
     if ( my ( $file, $dir, $prefix ) = $$out_ref =~ /$self->{tag}/ ) {
         $prefix = ''
             unless defined $prefix;
@@ -159,6 +160,8 @@ sub _shutdown {
 
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 

@@ -16,7 +16,9 @@ my $builder = Module::Build->new(
         'POE::Component::Net::FTP'    => 0.001,
         'POE::Component::IRC::Plugin' => 0.10,
         'Devel::TakeHashArgs'         => 0.003,
+        'perl' => '5.006',
     },
+    configure_requires => { 'Module::Build' => 0 },
     add_to_cleanup      => [ 'POE-Component-IRC-Plugin-FTP-EasyUpload-*' ],
     create_makefile_pl => 'traditional',
 );

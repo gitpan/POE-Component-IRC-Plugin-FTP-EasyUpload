@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use lib '../lib';
+use lib qw(../lib  lib);
 use POE qw(Component::IRC  Component::IRC::Plugin::FTP::EasyUpload);
 
 die "Usage: perl ftp_bot.pl <host> <login> <password>\n"
